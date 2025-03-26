@@ -116,16 +116,18 @@
   
   .about-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allows stacking on small screens */
   }
   
-  .about .text {
+  .about .text,
+  .about .image {
     flex: 1;
     min-width: 300px;
   }
+  
   
   .about .text h4 {
     color: #007bff;
@@ -144,8 +146,21 @@
   
   .about .image img {
     max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    display: block;
   }
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+  
+    .about .text,
+    .about .image {
+      width: 100%;
+    }
+  }
+  
   
   /* Footer */
   .footer {
