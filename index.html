@@ -7,16 +7,17 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
-<body>
+<body class="light-mode">
 
   <!-- Navbar -->
-  <header class="navbar">
+  <header class="navbar sticky">
     <div class="container nav-content">
       <div class="logo">
         <img src="assets/logo.png" alt="SC Technology Logo" class="logo-img" />
       </div>
-      <nav>
+      <nav class="nav-links-container">
         <ul class="nav-links">
           <li>Home</li>
           <li>From Naz</li>
@@ -33,6 +34,8 @@
           <option>Czech</option>
         </select>
         <button class="phone-btn">📞</button>
+        <button id="theme-toggle">🌙</button>
+        <button id="burger" class="burger">☰</button>
       </div>
     </div>
   </header>
@@ -101,9 +104,9 @@
       <div class="footer-section">
         <h4>Social Links</h4>
         <div class="social-icons">
-          <a href="#">📘</a>
-          <a href="#">🐦</a>
           <a href="#">📸</a>
+          <a href="#">🕊️</a>
+          <a href="#">📷</a>
         </div>
       </div>
     </div>
