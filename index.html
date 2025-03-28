@@ -11,13 +11,16 @@
 </head>
 <body class="light-mode">
 
-  <!-- Navbar -->
-  <header class="navbar sticky">
+  <header class="navbar">
     <div class="container nav-content">
       <div class="logo">
         <img src="assets/logo.png" alt="SC Technology Logo" class="logo-img" />
       </div>
-      <nav class="nav-links-container">
+      
+      <!-- Burger Icon -->
+      <button class="burger" aria-label="Toggle menu">&#9776;</button>
+  
+      <nav class="nav-menu">
         <ul class="nav-links">
           <li>Home</li>
           <li>From Naz</li>
@@ -28,17 +31,19 @@
           <li>Write</li>
         </ul>
       </nav>
+  
+      <!-- Right-side Controls -->
       <div class="nav-controls">
         <select>
           <option>English</option>
           <option>Czech</option>
         </select>
         <button class="phone-btn">📞</button>
-        <button id="theme-toggle">🌙</button>
-        <button id="burger" class="burger">☰</button>
+        <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
       </div>
     </div>
   </header>
+  
 
   <!-- Hero Section -->
   <section class="hero">
@@ -114,6 +119,22 @@
       © 2025 SCTechnology. All rights reserved.
     </div>
   </footer>
-
+  <script>
+    // Dark Mode Toggle
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  
+    // Burger Menu
+    const burger = document.querySelector('.burger');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+  
 </body>
 </html>
