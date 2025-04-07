@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naši Partneři - SCTechnology</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <style>
+    /* Additional styles specific to the partners page */
+    .partners-section {
+      background-color: #f8f9fa;
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 3rem;
+    }
+
+    .partner-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+      transition: all 0.3s ease;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .partner-logo {
+      max-width: 100%;
+      max-height: 100px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+
+    .partner-card:hover .partner-logo {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .partners-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+      }
+
+      .partner-card {
+        height: 120px;
+        padding: 20px;
+      }
+
+      .partner-logo {
+        max-height: 80px;
+      }
+    }
+  </style>
+</head>
+<body class="light-mode">
+
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="assets/logo.png" alt="SC Technology Logo" class="logo-img" />
+      </div>
+
+      <!-- Burger Icon -->
+      <button class="burger" aria-label="Toggle menu">&#9776;</button>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ONas.html">About Us</a></li>
+          <li><a href="kontakty.html">Contacts</a></li>
+          <li><a href="#">Reference</a></li>
+          <li><a href="#">Certification</a></li>
+          <li><a href="partneri.html">Our Partners</a></li>
+          <li><a href="#">Write</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right-side Controls -->
+      <div class="nav-controls">
+        <select>
+          <option>English</option>
+          <option>Czech</option>
+        </select>
+        <button class="phone-btn">📞</button>
+        <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h1>Our Partners</h1>
+      <p>
+        SCTechnology collaborates with leading industry partners to deliver the highest quality security and electrical systems.
+        Our partnerships allow us to provide cutting-edge solutions tailored to your specific needs.
+      </p>
+      <div class="hero-buttons">
+        <a href="#partners" class="btn-primary">View Partners →</a>
+        <a href="kontakty.html" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section id="partners" class="partners-section">
+    <div class="container">
+      <h4 class="section-subtitle">TRUSTED COLLABORATIONS</h4>
+      <h2 class="section-title">Our Technology Partners</h2>
+
+      <div class="partners-grid">
+        <!-- Partner 1 - Siemens -->
+        <div class="partner-card">
+          <img src="assets/Partners/siemens-logo.svg" alt="Siemens" class="partner-logo">
+        </div>
+
+        <!-- Partner 2 - Bosch -->
+        <div class="partner-card">
+          <img src="assets/Partners/Bosch-logo.png" alt="Bosch" class="partner-logo">
+        </div>
+
+        <!-- Partner 3 - Panasonic -->
+        <div class="partner-card">
+          <img src="assets/Partners/panasonic-logo.svg" alt="Panasonic" class="partner-logo">
+        </div>
+
+        <!-- Partner 4 - Philips -->
+        <div class="partner-card">
+          <img src="assets/Partners/Philips-logo.jpg" alt="Philips" class="partner-logo">
+        </div>
+
+        <!-- Partner 5 - Seetec -->
+        <div class="partner-card">
+          <img src="assets/Partners/seetec-logo.png" alt="Seetec" class="partner-logo">
+        </div>
+
+        <!-- Partner 6 - Ateas -->
+        <div class="partner-card">
+          <img src="assets/Partners/ateas-logo.png" alt="Ateas" class="partner-logo">
+        </div>
+
+        <!-- Partner 7 - Axis -->
+        <div class="partner-card">
+          <img src="assets/Partners/axis-logo.webp" alt="Axis" class="partner-logo">
+        </div>
+
+        <!-- Partner 8 - Intelex -->
+        <div class="partner-card">
+          <img src="assets/Partners/Intelex-logo.jpg" alt="Intelex" class="partner-logo">
+        </div>
+
+        <!-- Partner 9 - Geutelbruck -->
+        <div class="partner-card">
+          <img src="assets/Partners/geutebruck-logo.svg" alt="Geutelbruck" class="partner-logo">
+        </div>
+
+        <!-- Partner 10 - LG -->
+        <div class="partner-card">
+          <img src="assets/Partners/lg-logo.png" alt="LG" class="partner-logo">
+        </div>
+
+        <!-- Partner 11 - Dallmeier -->
+        <div class="partner-card">
+          <img src="assets/Partners/DallMeier-logo.jpg" alt="Dallmeier" class="partner-logo">
+        </div>
+
+        <!-- Partner 12 - Milestone -->
+        <div class="partner-card">
+          <img src="assets/Partners/milestone-logo.jpg" alt="Milestone" class="partner-logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership Benefits Section -->
+  <section class="services">
+    <div class="container">
+      <h4 class="section-subtitle">WHY PARTNER WITH US</h4>
+      <h2 class="section-title">Benefits of Our Partnerships</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3>Industry Expertise</h3>
+          <p>Access to specialized knowledge and industry-leading technologies through our extensive partner network.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3>Certified Solutions</h3>
+          <p>All our partner products and integrations are certified and tested to ensure optimal performance.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💸</div>
+          <h3>Cost Efficiency</h3>
+          <p>Our partnerships allow us to offer competitive pricing and value-added services to our clients.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Innovation Focus</h3>
+          <p>Stay ahead with the latest technological advancements and innovative security solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <div class="logo">SCTechnology</div>
+        <p class="company-info">SCTechnology s.r.o. • Kolbenova 942/38a • 190 00 Praha 9</p>
+        <p class="company-details">IČ: 261 49 311 • DIČ: CZ26149311</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ONas.html">About Us</a></li>
+          <li><a href="kontakty.html">Contacts</a></li>
+          <li><a href="#">Reference</a></li>
+          <li><a href="#">Certification</a></li>
+          <li><a href="partneri.html">Our Partners</a></li>
+          <li><a href="#">Write</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="contact-icon">📞</i> +420 774 119 164</p>
+        <p><i class="contact-icon">📧</i> sctechnology@sctechnology.cz</p>
+        <p><i class="contact-icon">📍</i> Kolbenova 942/38a · 190 00 Prague 9</p>
+      </div>
+      <div class="footer-section">
+        <h4>Social Links</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon">📱</a>
+          <a href="#" class="social-icon">💼</a>
+          <a href="#" class="social-icon">📷</a>
+        </div>
+        <p class="service-note">24/7 Service Available</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2023 SCTechnology s.r.o. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    // Dark Mode Toggle
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+
+    // Burger Menu
+    const burger = document.querySelector('.burger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
