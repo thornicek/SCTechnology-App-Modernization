@@ -1,140 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCTechnology</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
-</head>
-<body class="light-mode">
-
+<html lang="cs">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title data-i18n="sctechnology">
+   SCTechnology
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+  <script defer src="simple-translations.js">
+  </script>
+ </head>
+ <body class="light-mode" data-i18n="hero-section">
   <header class="navbar">
-    <div class="container nav-content">
-      <div class="logo">
-        <img src="assets/logo.png" alt="SC Technology Logo" class="logo-img" />
-      </div>
-      
-      <!-- Burger Icon -->
-      <button class="burger" aria-label="Toggle menu">&#9776;</button>
-  
-      <nav class="nav-menu">
-        <ul class="nav-links">
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contacts</li>
-          <li>Reference</li>
-          <li>Certification</li>
-          <li>Our Partners</li>
-          <li>Write</li>
-        </ul>
-      </nav>
-  
-      <!-- Right-side Controls -->
-      <div class="nav-controls">
-        <select>
-          <option>English</option>
-          <option>Czech</option>
-        </select>
-        <button class="phone-btn">📞</button>
-        <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
-      </div>
+   <div class="container nav-content" data-i18n="burger-icon">
+    <div class="logo">
+     <img alt="SC Technology Logo" class="logo-img" src="assets/logo.png"/>
     </div>
+    <!-- Burger Icon -->
+    <button aria-label="Toggle menu" class="burger">
+     ☰
+    </button>
+    <nav class="nav-menu">
+     <ul class="nav-links">
+      <li>
+       <a data-i18n="domů" href="index.html">
+        Domů
+       </a>
+      </li>
+      <li>
+       <a data-i18n="o-nás" href="ONas.html">
+        O nás
+       </a>
+      </li>
+      <li>
+       <a data-i18n="kontakty" href="kontakty.html">
+        Kontakty
+       </a>
+      </li>
+      <!-- Reference removed -->
+      <!-- Certifikace removed -->
+      <li>
+       <a data-i18n="naši-partneři" href="partneri.html">
+        Naši partneři
+       </a>
+      </li>
+      <!-- Napište removed -->
+     </ul>
+    </nav>
+    <!-- Right-side Controls -->
+    <div class="nav-controls">
+     <!-- Language selector removed -->
+     <!-- Phone button removed -->
+     <button class="dark-mode-toggle" id="darkModeToggle">
+      🌙
+     </button>
+    </div>
+   </div>
   </header>
-  
-
   <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="container hero-content">
-      <h1>Lorem Ipsum Dolor Sit</h1>
-      <p>
-        As specialists in our field, we would like to offer you our services in the field of
-        consultations, assessments, design, engineering, project management, supervision,
-        installation and service for security and heavy-current systems.
-      </p>
-      <a href="#" class="btn-primary">Contact Us →</a>
+   <div class="overlay">
+   </div>
+   <div class="container hero-content">
+    <h1 data-i18n="bezpečnostní-a-silnoproudé-systémy">
+     Bezpečnostní a silnoproudé systémy
+    </h1>
+    <p data-i18n="jako-specialisté-ve-svém-oboru-si-vám-dovolujeme-nabídnout-n">
+     Jako specialisté ve svém oboru si Vám dovolujeme nabídnout naše služby v oblasti konzultací, posudků, projekce,
+        engineeringu, projektového řízení, dozoru, instalací a servisu pro bezpečnostní a silnoproudé systémy.
+    </p>
+    <div class="hero-buttons">
+     <a class="btn-primary" data-i18n="naše-služby" href="#services">
+      Naše služby →
+     </a>
+     <a class="btn-secondary" data-i18n="kontaktujte-nás" href="kontakty.html">
+      Kontaktujte nás
+     </a>
     </div>
+   </div>
   </section>
-
   <!-- About Section -->
   <section class="about">
-    <div class="container about-content">
-      <div class="text">
-        <h4>ABOUT US</h4>
-        <h2>What We Do</h2>
-        <p>
-          As specialists in our field, we would like to offer you our services in the field of
-          consultations, assessments, design, engineering, project management, supervision,
-          installation and service for security and heavy-current systems.
-        </p>
-        <p>
-          These services are covered by our employees, who are authorized engineers and forensic
-          experts with many years of experience in the field and a number of significant completed contracts.
-        </p>
-        <a href="#" class="btn-primary">Contact Us →</a>
+   <div class="container about-content">
+    <div class="text">
+     <h4 data-i18n="o-nás">
+      O NÁS
+     </h4>
+     <h2 data-i18n="odborné-služby-od-roku-2000">
+      Odborné služby od roku 2000
+     </h2>
+     <p data-i18n="tyto-služby-jsou-zastřešovány-našimi-pracovníky-kteří-jsou-a">
+      Tyto služby jsou zastřešovány našimi pracovníky, kteří jsou autorizovanými inženýry a soudními znalci pro uvedenou oblast
+          s dlouholetou praxí v oboru a řadou významných realizovaných zakázek.
+     </p>
+     <p data-i18n="společnost-sctechnology-s-r-o-působí-na-trhu-od-roku-2000-a-">
+      Společnost SCTechnology s.r.o. působí na trhu od roku 2000 a poskytuje komplexní služby v oblasti elektrických systémů.
+          Jsme hrdí na to, že dodáváme přizpůsobená řešení, která splňují jedinečné bezpečnostní výzvy každého klienta.
+     </p>
+     <div class="about-features">
+      <div class="feature">
+       <span class="icon">
+        🔒
+       </span>
+       <span data-i18n="servis-24-7">
+        Servis 24/7
+       </span>
       </div>
-      <div class="image fade-in">
-        <img src="assets/picture5.jpg" alt="Surveillance Technology" />
+      <div class="feature">
+       <span class="icon">
+        📋
+       </span>
+       <span data-i18n="autorizovaní-inženýři">
+        Autorizovaní inženýři
+       </span>
       </div>
+      <div class="feature">
+       <span class="icon">
+        🛠️
+       </span>
+       <span data-i18n="soudní-znalci-v-oboru">
+        Soudní znalci v oboru
+       </span>
+      </div>
+     </div>
+     <a class="btn-primary" data-i18n="více-informací" href="ONas.html">
+      Více informací →
+     </a>
     </div>
+    <div class="image fade-in">
+     <img alt="Bezpečnostní systémy" src="assets/picture5.jpg"/>
+    </div>
+   </div>
   </section>
-
+  <!-- Services Section -->
+  <section class="services" id="services">
+   <div class="container">
+    <h4 class="section-subtitle" data-i18n="naše-služby">
+     NAŠE SLUŽBY
+    </h4>
+    <h2 class="section-title" data-i18n="komplexní-bezpečnostní-řešení">
+     Komplexní bezpečnostní řešení
+    </h2>
+    <div class="services-grid">
+     <div class="service-card">
+      <div class="service-icon">
+       🔥
+      </div>
+      <h3 data-i18n="elektrická-požární-signalizace">
+       Elektrická požární signalizace
+      </h3>
+      <p data-i18n="návrh-instalace-a-údržba-systémů-detekce-a-signalizace-požár">
+       Návrh, instalace a údržba systémů detekce a signalizace požáru.
+      </p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon">
+       🚨
+      </div>
+      <h3 data-i18n="zabezpečovací-systémy">
+       Zabezpečovací systémy
+      </h3>
+      <p data-i18n="pokročilá-řešení-detekce-narušení-a-bezpečnostních-alarmů">
+       Pokročilá řešení detekce narušení a bezpečnostních alarmů.
+      </p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon">
+       📹
+      </div>
+      <h3 data-i18n="kamerové-systémy">
+       Kamerové systémy
+      </h3>
+      <p data-i18n="systémy-cctv-a-video-dohledu-pro-monitorování-a-zabezpečení">
+       Systémy CCTV a video dohledu pro monitorování a zabezpečení.
+      </p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon">
+       🔑
+      </div>
+      <h3 data-i18n="kontrola-vstupu">
+       Kontrola vstupu
+      </h3>
+      <p data-i18n="kontrola-vstupu-docházkové-systémy-turnikety-brány-a-závory">
+       Kontrola vstupu, docházkové systémy, turnikety, brány a závory.
+      </p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon">
+       📢
+      </div>
+      <h3 data-i18n="audio-video-systémy">
+       Audio/Video systémy
+      </h3>
+      <p data-i18n="interkom-evakuační-a-veřejné-rozhlasové-systémy">
+       Interkom, evakuační a veřejné rozhlasové systémy.
+      </p>
+     </div>
+     <div class="service-card">
+      <div class="service-icon">
+       🌐
+      </div>
+      <h3 data-i18n="síťová-infrastruktura">
+       Síťová infrastruktura
+      </h3>
+      <p data-i18n="strukturovaná-kabeláž-lokální-počítačové-sítě-a-telefonní-sy">
+       Strukturovaná kabeláž, lokální počítačové sítě a telefonní systémy.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Quote Section -->
+  <section class="quote-section" style="background-color: #f8f9fa; padding: 4rem 0; text-align: center;">
+   <div class="container">
+    <blockquote style="font-size: 1.5rem; font-style: italic; color: #495057; max-width: 800px; margin: 0 auto;">
+     <p data-i18n="projekce-autorský-dohled-instalace-servis-revize">
+      Projekce, autorský dohled, instalace, servis, revize -
+      <strong data-i18n="servis-24-hodin">
+       SERVIS 24 hodin...
+      </strong>
+     </p>
+    </blockquote>
+   </div>
+  </section>
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <div class="logo">SCTechnology</div>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li>Home</li>
-          <li>From Naz</li>
-          <li>Contacts</li>
-          <li>Reference</li>
-          <li>Certification</li>
-          <li>Our Partners</li>
-          <li>Write</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <p>📞 +420 774 119 154</p>
-        <p>📧 sctechnology@sctechnology.cz</p>
-        <p>📍 Kolbenova 943/38a · 190 00 Prague 9</p>
-      </div>
-      <div class="footer-section">
-        <h4>Social Links</h4>
-        <div class="social-icons">
-          <a href="#">📸</a>
-          <a href="#">🕊️</a>
-          <a href="#">📷</a>
-        </div>
-      </div>
+   <div class="container footer-content">
+    <div class="footer-section">
+     <div class="logo" data-i18n="sctechnology">
+      SCTechnology
+     </div>
+     <p class="company-info" data-i18n="sctechnology-s-r-o-kolbenova-942-38a-190-00-praha-9">
+      SCTechnology s.r.o. • Kolbenova 942/38a • 190 00 Praha 9
+     </p>
+     <p class="company-details" data-i18n="ič-261-49-311-dič-cz26149311">
+      IČ: 261 49 311 • DIČ: CZ26149311
+     </p>
     </div>
-    <div class="copyright">
-      © 2025 SCTechnology. All rights reserved.
+    <div class="footer-section">
+     <h4 data-i18n="rychlé-odkazy">
+      Rychlé odkazy
+     </h4>
+     <ul>
+      <li>
+       <a data-i18n="domů" href="index.html">
+        Domů
+       </a>
+      </li>
+      <li>
+       <a data-i18n="o-nás" href="ONas.html">
+        O nás
+       </a>
+      </li>
+      <li>
+       <a data-i18n="kontakty" href="kontakty.html">
+        Kontakty
+       </a>
+      </li>
+      <li>
+       <a data-i18n="reference" href="#">
+        Reference
+       </a>
+      </li>
+      <li>
+       <a data-i18n="certifikace" href="#">
+        Certifikace
+       </a>
+      </li>
+      <li>
+       <a data-i18n="naši-partneři" href="partneri.html">
+        Naši partneři
+       </a>
+      </li>
+      <li>
+       <a data-i18n="napište" href="#">
+        Napište
+       </a>
+      </li>
+     </ul>
     </div>
+    <div class="footer-section">
+     <h4 data-i18n="kontaktní-informace">
+      Kontaktní informace
+     </h4>
+     <p>
+      <i class="contact-icon">
+       📞
+      </i>
+      +420 774 119 164
+     </p>
+     <p data-i18n="sctechnology-sctechnology-cz">
+      <i class="contact-icon">
+       📧
+      </i>
+      sctechnology@sctechnology.cz
+     </p>
+     <p data-i18n="kolbenova-942-38a-190-00-praha-9">
+      <i class="contact-icon">
+       📍
+      </i>
+      Kolbenova 942/38a · 190 00 Praha 9
+     </p>
+    </div>
+    <div class="footer-section">
+     <h4 data-i18n="sociální-sítě">
+      Sociální sítě
+     </h4>
+     <div class="social-icons">
+      <a class="social-icon" href="#">
+       �
+      </a>
+      <a class="social-icon" href="#">
+       �
+      </a>
+      <a class="social-icon" href="#">
+       📷
+      </a>
+     </div>
+     <p class="service-note" data-i18n="servis-k-dispozici-24-7">
+      Servis k dispozici 24/7
+     </p>
+    </div>
+   </div>
+   <div class="copyright" data-i18n="2023-sctechnology-s-r-o-všechna-práva-vyhrazena">
+    © 2023 SCTechnology s.r.o. Všechna práva vyhrazena.
+   </div>
   </footer>
   <script>
+    // Dark Mode Toggle initialization only
+    // Translation is handled by simple-translations.js
     // Dark Mode Toggle
     const toggle = document.getElementById('darkModeToggle');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
     });
-  
+
     // Burger Menu
     const burger = document.querySelector('.burger');
     const navMenu = document.querySelector('.nav-menu');
-  
+
     burger.addEventListener('click', () => {
       navMenu.classList.toggle('open');
     });
   </script>
-  
-</body>
+ </body>
 </html>

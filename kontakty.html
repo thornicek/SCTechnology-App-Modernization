@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakty - SCTechnology</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+<html lang="cs">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title data-i18n="kontakty-sctechnology">
+   Kontakty - SCTechnology
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
   <style>
-    /* Additional styles specific to the contact page */
+   /* Additional styles specific to the contact page */
     .contact-section {
       background-color: #f8f9fa;
       padding: 6rem 0;
@@ -101,229 +104,356 @@
       }
     }
   </style>
-</head>
-<body class="light-mode">
-
+  <script defer src="simple-translations.js">
+  </script>
+ </head>
+ <body class="light-mode" data-i18n="hero-section">
   <header class="navbar">
-    <div class="container nav-content">
-      <div class="logo">
-        <img src="assets/logo.png" alt="SC Technology Logo" class="logo-img" />
-      </div>
-
-      <!-- Burger Icon -->
-      <button class="burger" aria-label="Toggle menu">&#9776;</button>
-
-      <nav class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ONas.html">About Us</a></li>
-          <li><a href="kontakty.html">Contacts</a></li>
-          <li><a href="#">Reference</a></li>
-          <li><a href="#">Certification</a></li>
-          <li><a href="#">Our Partners</a></li>
-          <li><a href="#">Write</a></li>
-        </ul>
-      </nav>
-
-      <!-- Right-side Controls -->
-      <div class="nav-controls">
-        <select>
-          <option>English</option>
-          <option>Czech</option>
-        </select>
-        <button class="phone-btn">📞</button>
-        <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
-      </div>
+   <div class="container nav-content" data-i18n="burger-icon">
+    <div class="logo">
+     <img alt="SC Technology Logo" class="logo-img" src="assets/logo.png"/>
     </div>
+    <!-- Burger Icon -->
+    <button aria-label="Toggle menu" class="burger">
+     ☰
+    </button>
+    <nav class="nav-menu">
+     <ul class="nav-links">
+      <li>
+       <a data-i18n="home" href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a data-i18n="about-us" href="ONas.html">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a data-i18n="contacts" href="kontakty.html">
+        Kontakty
+       </a>
+      </li>
+      <!-- Reference removed -->
+      <!-- Certifikace removed -->
+      <li>
+       <a data-i18n="our-partners" href="partneri.html">
+        Naši partneři
+       </a>
+      </li>
+      <!-- Napište removed -->
+     </ul>
+    </nav>
+    <!-- Right-side Controls -->
+    <div class="nav-controls">
+     <!-- Language selector removed -->
+     <!-- Phone button removed -->
+     <button class="dark-mode-toggle" id="darkModeToggle">
+      🌙
+     </button>
+    </div>
+   </div>
   </header>
-
-
   <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="container hero-content">
-      <h1>Contact Us</h1>
-      <p>
-        Get in touch with our team of experts for consultations, inquiries, or support.
-        We're here to help you with all your security system needs.
-      </p>
-      <div class="hero-buttons">
-        <a href="#contact-info" class="btn-primary">Our Contacts →</a>
-        <a href="mailto:sctechnology@sctechnology.cz" class="btn-secondary">Email Us</a>
-      </div>
+   <div class="overlay">
+   </div>
+   <div class="container hero-content">
+    <h1 data-i18n="contact-us">
+     Kontaktujte nás
+    </h1>
+    <p data-i18n="get-in-touch-with-our-team-of-experts-for-consultations-inqu">
+     Kontaktujte náš tým odborníků pro konzultace, dotazy nebo podporu.
+        Jsme tu, abychom vám pomohli se všemi vašimi potřebami v oblasti bezpečnostních systémů.
+    </p>
+    <div class="hero-buttons">
+     <a class="btn-primary" data-i18n="our-contacts" href="#contact-info">
+      Naše kontakty →
+     </a>
+     <a class="btn-secondary" data-i18n="email-us" href="mailto:sctechnology@sctechnology.cz">
+      Napište nám
+     </a>
     </div>
+   </div>
   </section>
-
   <!-- Contact Section -->
-  <section id="contact-info" class="contact-section">
-    <div class="container">
-      <h4 class="section-subtitle">GET IN TOUCH</h4>
-      <h2 class="section-title">Contact Information</h2>
-
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>SCTechnology s.r.o.</h3>
-
-          <div class="contact-detail">
-            <strong>Address:</strong>
-            Kolbenova 942/38a, 190 00 Praha 9
-          </div>
-
-          <div class="contact-detail">
-            <strong>Company Director:</strong>
-            +420 774 119 164
-          </div>
-
-          <div class="contact-detail">
-            <strong>Company Information:</strong>
-            IČ: 261 49 311<br>
-            DIČ: CZ26149311<br>
-            Registered in the Commercial Register of the Municipal Court in Prague C 74617 on January 24, 2000
-          </div>
-
-          <div class="contact-departments">
-            <div class="department">
-              <div class="department-name">Company Director:</div>
-              <a href="mailto:simek@sctechnology.cz" class="contact-email">simek@sctechnology.cz</a>
-            </div>
-
-            <div class="department">
-              <div class="department-name">Business Department:</div>
-              <a href="mailto:sctechnology@sctechnology.cz" class="contact-email">sctechnology@sctechnology.cz</a>
-            </div>
-
-            <div class="department">
-              <div class="department-name">Project Department:</div>
-              <a href="mailto:project@sctechnology.cz" class="contact-email">project@sctechnology.cz</a>
-            </div>
-
-            <div class="department">
-              <div class="department-name">IT Department:</div>
-              <a href="mailto:IT@sctechnology.cz" class="contact-email">IT@sctechnology.cz</a>
-            </div>
-
-            <div class="department">
-              <div class="department-name">Finance Department:</div>
-              <a href="mailto:finance@sctechnology.cz" class="contact-email">finance@sctechnology.cz</a>
-            </div>
-
-            <div class="department">
-              <div class="department-name">Service Department:</div>
-              <a href="mailto:servis@sctechnology.cz" class="contact-email">servis@sctechnology.cz</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.9891173911584!2d14.507690776537287!3d50.10764491420933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becf2a3259b23%3A0x7a2b3c01ea8b2a7a!2sKolbenova%20942%2F38a%2C%20190%2000%20Praha%209-Vysočany!5e0!3m2!1sen!2scz!4v1686747123456!5m2!1sen!2scz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+  <section class="contact-section" id="contact-info">
+   <div class="container">
+    <h4 class="section-subtitle" data-i18n="get-in-touch">
+     KONTAKTUJTE NÁS
+    </h4>
+    <h2 class="section-title" data-i18n="contact-information">
+     Kontaktní informace
+    </h2>
+    <div class="contact-grid">
+     <div class="contact-info">
+      <h3 data-i18n="sctechnology-s-r-o">
+       SCTechnology s.r.o.
+      </h3>
+      <div class="contact-detail" data-i18n="kolbenova-942-38a-190-00-praha-9">
+       <strong data-i18n="address">
+        Adresa:
+       </strong>
+       Kolbenova 942/38a, 190 00 Praha 9
       </div>
+      <div class="contact-detail">
+       <strong data-i18n="company-director">
+        Company Director:
+       </strong>
+       +420 774 119 164
+      </div>
+      <div class="contact-detail" data-i18n="ič-261-49-311">
+       <strong data-i18n="company-information">
+        Informace o společnosti:
+       </strong>
+       IČ: 261 49 311
+       <br/>
+       DIČ: CZ26149311
+       <br/>
+       Zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 74617 dne 24. ledna 2000
+      </div>
+      <div class="contact-departments">
+       <div class="department">
+        <div class="department-name" data-i18n="company-director">
+         Company Director:
+        </div>
+        <a class="contact-email" data-i18n="simek-sctechnology-cz" href="mailto:simek@sctechnology.cz">
+         simek@sctechnology.cz
+        </a>
+       </div>
+       <div class="department">
+        <div class="department-name" data-i18n="business-department">
+         Obchodní oddělení:
+        </div>
+        <a class="contact-email" data-i18n="sctechnology-sctechnology-cz" href="mailto:sctechnology@sctechnology.cz">
+         sctechnology@sctechnology.cz
+        </a>
+       </div>
+       <div class="department">
+        <div class="department-name" data-i18n="project-department">
+         Projektové oddělení:
+        </div>
+        <a class="contact-email" data-i18n="project-sctechnology-cz" href="mailto:project@sctechnology.cz">
+         project@sctechnology.cz
+        </a>
+       </div>
+       <div class="department">
+        <div class="department-name" data-i18n="it-department">
+         IT oddělení:
+        </div>
+        <a class="contact-email" data-i18n="it-sctechnology-cz" href="mailto:IT@sctechnology.cz">
+         IT@sctechnology.cz
+        </a>
+       </div>
+       <div class="department">
+        <div class="department-name" data-i18n="finance-department">
+         Finanční oddělení:
+        </div>
+        <a class="contact-email" data-i18n="finance-sctechnology-cz" href="mailto:finance@sctechnology.cz">
+         finance@sctechnology.cz
+        </a>
+       </div>
+       <div class="department">
+        <div class="department-name" data-i18n="service-department">
+         Servisní oddělení:
+        </div>
+        <a class="contact-email" data-i18n="servis-sctechnology-cz" href="mailto:servis@sctechnology.cz">
+         servis@sctechnology.cz
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="map-container">
+      <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.9891173911584!2d14.507690776537287!3d50.10764491420933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becf2a3259b23%3A0x7a2b3c01ea8b2a7a!2sKolbenova%20942%2F38a%2C%20190%2000%20Praha%209-Vysočany!5e0!3m2!1sen!2scz!4v1686747123456!5m2!1sen!2scz">
+      </iframe>
+     </div>
     </div>
+   </div>
   </section>
-
   <!-- Contact Form Section -->
   <section class="contact-form-section" style="background-color: #fff; padding: 6rem 0; position: relative;">
-    <div class="container">
-      <h4 class="section-subtitle">GET IN TOUCH</h4>
-      <h2 class="section-title">Write to Us</h2>
-
-      <div style="max-width: 800px; margin: 0 auto; background-color: #f8f9fa; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-        <form id="contactForm" action="#" method="post" style="display: grid; gap: 20px;">
-          <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-              <label for="firstName" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">First Name *</label>
-              <input type="text" id="firstName" name="firstName" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem;">
-            </div>
-            <div>
-              <label for="lastName" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">Last Name *</label>
-              <input type="text" id="lastName" name="lastName" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem;">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">Email *</label>
-            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem;">
-          </div>
-
-          <div class="form-group">
-            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">Your Message *</label>
-            <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem; resize: vertical;"></textarea>
-          </div>
-
-          <div class="form-group" style="display: flex; align-items: flex-start; gap: 10px;">
-            <input type="checkbox" id="newsletter" name="newsletter" style="margin-top: 4px;">
-            <label for="newsletter" style="font-size: 0.9rem; color: #6c757d;">
-              I agree that SCTechnology s.r.o. may send me commercial communications regarding the offer of products and services in accordance with Act No. 480/2004 Coll. as amended. By giving your consent, in accordance with Act No. 101/2000 Coll. as amended, you give your consent to the processing of the provided email address by SCTechnology s.r.o. for the purpose of inclusion in the database and other advertising, marketing purposes, i.e. especially offering products, services and for the purpose of sending commercial communications through electronic means according to valid Act No. 480/2004 Coll., for a period of 10 years until revocation. You can cancel this consent at any time by sending an email to sctechnology@sctechnology.cz
-            </label>
-          </div>
-
-          <div style="text-align: center; margin-top: 20px;">
-            <button type="submit" class="btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Send Message</button>
-          </div>
-        </form>
+   <div class="container">
+    <h4 class="section-subtitle" data-i18n="get-in-touch">
+     KONTAKTUJTE NÁS
+    </h4>
+    <h2 class="section-title" data-i18n="write-to-us">
+     Napište nám
+    </h2>
+    <div style="max-width: 800px; margin: 0 auto; background-color: #f8f9fa; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+     <form action="#" id="contactForm" method="post" style="display: grid; gap: 20px;">
+      <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+       <div>
+        <label data-i18n="first-name" for="firstName" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">
+         Jméno *
+        </label>
+        <input id="firstName" name="firstName" required="" style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem;" type="text"/>
+       </div>
+       <div>
+        <label data-i18n="last-name" for="lastName" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">
+         Příjmení *
+        </label>
+        <input id="lastName" name="lastName" required="" style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem;" type="text"/>
+       </div>
       </div>
+      <div class="form-group">
+       <label data-i18n="email" for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">
+        Email *
+       </label>
+       <input id="email" name="email" required="" style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem;" type="email"/>
+      </div>
+      <div class="form-group">
+       <label data-i18n="your-message" for="message" style="display: block; margin-bottom: 8px; font-weight: 600; color: #212529;">
+        Vaše zpráva *
+       </label>
+       <textarea id="message" name="message" required="" rows="6" style="width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 1rem; resize: vertical;"></textarea>
+      </div>
+      <div class="form-group" style="display: flex; align-items: flex-start; gap: 10px;">
+       <input id="newsletter" name="newsletter" style="margin-top: 4px;" type="checkbox"/>
+       <label data-i18n="i-agree-that-sctechnology-s-r-o-may-send-me-commercial-commu" for="newsletter" style="font-size: 0.9rem; color: #6c757d;">
+        I agree that SCTechnology s.r.o. may send me commercial communications regarding the offer of products and services in accordance with Act No. 480/2004 Coll. as amended. By giving your consent, in accordance with Act No. 101/2000 Coll. as amended, you give your consent to the processing of the provided email address by SCTechnology s.r.o. for the purpose of inclusion in the database and other advertising, marketing purposes, i.e. especially offering products, services and for the purpose of sending commercial communications through electronic means according to valid Act No. 480/2004 Coll., for a period of 10 years until revocation. You can cancel this consent at any time by sending an email to sctechnology@sctechnology.cz
+       </label>
+      </div>
+      <div style="text-align: center; margin-top: 20px;">
+       <button class="btn-primary" data-i18n="send-message" style="padding: 12px 30px; font-size: 1.1rem;" type="submit">
+        Odeslat zprávu
+       </button>
+      </div>
+     </form>
     </div>
+   </div>
   </section>
-
   <!-- Service Hours Section -->
   <section class="services" style="padding: 4rem 0;">
-    <div class="container">
-      <h4 class="section-subtitle">ALWAYS AVAILABLE</h4>
-      <h2 class="section-title">Our Service Hours</h2>
-
-      <div class="service-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-        <div class="service-icon" style="font-size: 3rem;">⏰</div>
-        <h3>24/7 Service Support</h3>
-        <p>Our technical support and emergency service teams are available 24 hours a day, 7 days a week to assist you with any urgent issues or system failures.</p>
-        <div style="margin-top: 20px;">
-          <a href="tel:+420774119164" class="btn-primary" style="margin-top: 15px;">Call Now</a>
-        </div>
-      </div>
+   <div class="container">
+    <h4 class="section-subtitle" data-i18n="always-available">
+     VŽDY K DISPOZICI
+    </h4>
+    <h2 class="section-title" data-i18n="our-service-hours">
+     Naše servisní hodiny
+    </h2>
+    <div class="service-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+     <div class="service-icon" style="font-size: 3rem;">
+      ⏰
+     </div>
+     <h3 data-i18n="24-7-service-support">
+      Servisní podpora 24/7
+     </h3>
+     <p data-i18n="our-technical-support-and-emergency-service-teams-are-availa">
+      Naše týmy technické podpory a pohotovostního servisu jsou k dispozici 24 hodin denně, 7 dní v týdnu, aby vám pomohly s jakýmikoli naléhavými problémy nebo selháním systému.
+     </p>
+     <div style="margin-top: 20px;">
+      <a class="btn-primary" data-i18n="call-now" href="tel:+420774119164" style="margin-top: 15px;">
+       Zavolejte nyní
+      </a>
+     </div>
     </div>
+   </div>
   </section>
-
   <!-- Footer -->
-  <footer id="contact" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <div class="logo">SCTechnology</div>
-        <p class="company-info">SCTechnology s.r.o. • Kolbenova 942/38a • 190 00 Praha 9</p>
-        <p class="company-details">IČ: 261 49 311 • DIČ: CZ26149311</p>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ONas.html">About Us</a></li>
-          <li><a href="kontakty.html">Contacts</a></li>
-          <li><a href="#">Reference</a></li>
-          <li><a href="#">Certification</a></li>
-          <li><a href="#">Our Partners</a></li>
-          <li><a href="#">Write</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <p><i class="contact-icon">📞</i> +420 774 119 164</p>
-        <p><i class="contact-icon">📧</i> sctechnology@sctechnology.cz</p>
-        <p><i class="contact-icon">📍</i> Kolbenova 942/38a · 190 00 Prague 9</p>
-      </div>
-      <div class="footer-section">
-        <h4>Social Links</h4>
-        <div class="social-icons">
-          <a href="#" class="social-icon">📱</a>
-          <a href="#" class="social-icon">💼</a>
-          <a href="#" class="social-icon">📷</a>
-        </div>
-        <p class="service-note">24/7 Service Available</p>
-      </div>
+  <footer class="footer" id="contact">
+   <div class="container footer-content">
+    <div class="footer-section">
+     <div class="logo" data-i18n="sctechnology">
+      SCTechnology
+     </div>
+     <p class="company-info" data-i18n="sctechnology-s-r-o-kolbenova-942-38a-190-00-praha-9">
+      SCTechnology s.r.o. • Kolbenova 942/38a • 190 00 Praha 9
+     </p>
+     <p class="company-details" data-i18n="ič-261-49-311-dič-cz26149311">
+      IČ: 261 49 311 • DIČ: CZ26149311
+     </p>
     </div>
-    <div class="copyright">
-      © 2023 SCTechnology s.r.o. All rights reserved.
+    <div class="footer-section">
+     <h4 data-i18n="quick-links">
+      Rychlé odkazy
+     </h4>
+     <ul>
+      <li>
+       <a data-i18n="home" href="index.html">
+        Domů
+       </a>
+      </li>
+      <li>
+       <a data-i18n="about-us" href="ONas.html">
+        O nás
+       </a>
+      </li>
+      <li>
+       <a data-i18n="contacts" href="kontakty.html">
+        Kontakty
+       </a>
+      </li>
+      <li>
+       <a data-i18n="reference" href="reference.html">
+        Reference
+       </a>
+      </li>
+      <li>
+       <a data-i18n="certification" href="#">
+        Certifikace
+       </a>
+      </li>
+      <li>
+       <a data-i18n="our-partners" href="partneri.html">
+        Naši partneři
+       </a>
+      </li>
+      <li>
+       <a data-i18n="write" href="#">
+        Napište
+       </a>
+      </li>
+     </ul>
     </div>
+    <div class="footer-section">
+     <h4 data-i18n="contact-info">
+      Contact Info
+     </h4>
+     <p>
+      <i class="contact-icon">
+       📞
+      </i>
+      +420 774 119 164
+     </p>
+     <p data-i18n="sctechnology-sctechnology-cz">
+      <i class="contact-icon">
+       📧
+      </i>
+      sctechnology@sctechnology.cz
+     </p>
+     <p data-i18n="kolbenova-942-38a-190-00-prague-9">
+      <i class="contact-icon">
+       📍
+      </i>
+      Kolbenova 942/38a · 190 00 Prague 9
+     </p>
+    </div>
+    <div class="footer-section">
+     <h4 data-i18n="social-links">
+      Sociální sítě
+     </h4>
+     <div class="social-icons">
+      <a class="social-icon" href="#">
+       📱
+      </a>
+      <a class="social-icon" href="#">
+       💼
+      </a>
+      <a class="social-icon" href="#">
+       📷
+      </a>
+     </div>
+     <p class="service-note" data-i18n="24-7-service-available">
+      Servis k dispozici 24/7
+     </p>
+    </div>
+   </div>
+   <div class="copyright" data-i18n="2023-sctechnology-s-r-o-all-rights-reserved">
+    © 2023 SCTechnology s.r.o. Všechna práva vyhrazena.
+   </div>
   </footer>
   <script>
-    // Dark Mode Toggle
+   // Dark Mode Toggle
     const toggle = document.getElementById('darkModeToggle');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
@@ -371,6 +501,5 @@
       });
     }
   </script>
-
-</body>
+ </body>
 </html>

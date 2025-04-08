@@ -1,245 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCTechnology</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
-</head>
-<body class="light-mode">
-
+<html lang="cs">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title data-i18n="o-nás-sctechnology">
+   O nás - SCTechnology
+  </title>
+  <!-- Favicon with multiple sizes for better visibility -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" sizes="16x16"/>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" sizes="32x32"/>
+  <link rel="apple-touch-icon" href="assets/favicon.ico"/>
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+  <script defer src="simple-translations.js">
+  </script>
+ </head>
+ <body>
+  <!-- Header -->
   <header class="navbar">
-    <div class="container nav-content">
-      <div class="logo">
-        <img src="assets/logo.png" alt="SC Technology Logo" class="logo-img" />
-      </div>
-
-      <!-- Burger Icon -->
-      <button class="burger" aria-label="Toggle menu">&#9776;</button>
-
-      <nav class="nav-menu">
-        <ul class="nav-links">
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contacts</li>
-          <li>Reference</li>
-          <li>Certification</li>
-          <li>Our Partners</li>
-          <li>Write</li>
-        </ul>
-      </nav>
-
-      <!-- Right-side Controls -->
-      <div class="nav-controls">
-        <select>
-          <option>English</option>
-          <option>Czech</option>
-        </select>
-        <button class="phone-btn">📞</button>
-        <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
-      </div>
+   <div class="container nav-content" data-i18n="burger-icon">
+    <div class="logo">
+     <img alt="SC Technology Logo" class="logo-img" src="assets/logo.png"/>
     </div>
+    <!-- Burger Icon -->
+    <button aria-label="Toggle menu" class="burger">
+     ☰
+    </button>
+    <nav class="nav-menu">
+     <ul class="nav-links">
+      <li>
+       <a data-i18n="domů" href="index.html">
+        Domů
+       </a>
+      </li>
+      <li>
+       <a data-i18n="o-nás" href="ONas.html">
+        O nás
+       </a>
+      </li>
+      <li>
+       <a data-i18n="kontakty" href="kontakty.html">
+        Kontakty
+       </a>
+      </li>
+      <!-- Reference removed -->
+      <!-- Certifikace removed -->
+      <li>
+       <a data-i18n="naši-partneři" href="partneri.html">
+        Naši partneři
+       </a>
+      </li>
+      <!-- Napište removed -->
+     </ul>
+    </nav>
+    <!-- Right-side Controls -->
+    <div class="nav-controls">
+     <!-- Language selector removed -->
+     <!-- Phone button removed -->
+     <button class="dark-mode-toggle" id="darkModeToggle">
+      🌙
+     </button>
+    </div>
+   </div>
   </header>
-
-
   <!-- Hero Section -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="container hero-content">
-      <h1>Security Solutions Since 2000</h1>
-      <p>
-        SCTechnology s.r.o. has been providing comprehensive electrical and security systems
-        for over two decades. We deliver expert solutions tailored to your specific needs,
-        from consultation to implementation and ongoing support.
-      </p>
-      <div class="hero-buttons">
-        <a href="#services" class="btn-primary">Our Services →</a>
-        <a href="#contact" class="btn-secondary">Contact Us</a>
-      </div>
+   <div class="overlay">
+   </div>
+   <div class="container hero-content">
+    <h1 data-i18n="bezpečnostní-řešení-od-roku-2000">
+     Bezpečnostní řešení od roku 2000
+    </h1>
+    <p data-i18n="sctechnology-s-r-o-poskytuje-komplexní-elektrické-a-bezpečno">
+     SCTechnology s.r.o. poskytuje komplexní elektrické a bezpečnostní systémy již více než dvě desetiletí.
+        Dodáváme odborná řešení přizpůsobená vašim specifickým potřebám, od konzultace až po implementaci a průběžnou podporu.
+    </p>
+    <div class="hero-buttons">
+     <a class="btn-secondary" data-i18n="kontaktujte-nás" href="kontakty.html">
+      Kontaktujte nás
+     </a>
     </div>
+   </div>
   </section>
-
   <!-- About Section -->
-  <section class="about">
-    <div class="container about-content">
-      <div class="text">
-        <h4>ABOUT US</h4>
-        <h2>Our Expertise & Mission</h2>
-        <p>
-          SCTechnology s.r.o. has been operating in the market since 2000, providing comprehensive services in the field of electrical systems.
-          Our team consists of certified engineers and industry experts who bring their extensive knowledge to every project.
-        </p>
-        <p>
-          We pride ourselves on delivering customized solutions that meet the unique security challenges of each client,
-          from small businesses to large enterprises across various sectors.
-        </p>
-        <div class="about-features">
-          <div class="feature">
-            <span class="icon">🔒</span>
-            <span>24/7 Service</span>
-          </div>
-          <div class="feature">
-            <span class="icon">📋</span>
-            <span>Certified Experts</span>
-          </div>
-          <div class="feature">
-            <span class="icon">🛠️</span>
-            <span>Full Project Support</span>
-          </div>
+  <section class="about" id="about">
+   <div class="container">
+    <div class="about-content">
+     <div class="text">
+      <h4 data-i18n="o-nás">
+       O NÁS
+      </h4>
+      <h2 data-i18n="odborné-služby-od-roku-2000">
+       Odborné služby od roku 2000
+      </h2>
+      <p data-i18n="tyto-služby-jsou-zastřešovány-našimi-pracovníky-kteří-jsou-a">
+       Tyto služby jsou zastřešovány našimi pracovníky, kteří jsou autorizovanými inženýry a soudními znalci pro uvedenou oblast
+          s dlouholetou praxí v oboru a řadou významných realizovaných zakázek.
+      </p>
+      <p data-i18n="společnost-sctechnology-s-r-o-působí-na-trhu-od-roku-2000-a-">
+       Společnost SCTechnology s.r.o. působí na trhu od roku 2000 a poskytuje komplexní služby v oblasti elektrických systémů.
+          Jsme hrdí na to, že dodáváme přizpůsobená řešení, která splňují jedinečné bezpečnostní výzvy každého klienta.
+      </p>
+      <div class="about-features">
+       <div class="feature">
+        <div class="icon">
+         ⏰
         </div>
+        <span data-i18n="servis-24/7">
+         Servis 24/7
+        </span>
+       </div>
+       <div class="feature">
+        <div class="icon">
+         🛡️
+        </div>
+        <span data-i18n="autorizovaní-inženýři">
+         Autorizovaní inženýři
+        </span>
+       </div>
+       <div class="feature">
+        <div class="icon">
+         📋
+        </div>
+        <span data-i18n="soudní-znalci-v-oboru">
+         Soudní znalci v oboru
+        </span>
+       </div>
       </div>
-      <div class="image fade-in">
-        <img src="assets/picture5.jpg" alt="SC Technology Security Experts" />
-      </div>
+     </div>
+     <div class="image">
+      <img alt="SC Technology Team" src="assets/about-image.jpg"/>
+     </div>
     </div>
+   </div>
   </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
-      <h4 class="section-subtitle">OUR SERVICES</h4>
-      <h2 class="section-title">Comprehensive Security Solutions</h2>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🔥</div>
-          <h3>Fire Alarm Systems</h3>
-          <p>Design, installation and maintenance of fire detection and alarm systems.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🚨</div>
-          <h3>Security Alarm Systems</h3>
-          <p>Advanced intrusion detection and security alarm solutions.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📹</div>
-          <h3>Camera Systems</h3>
-          <p>CCTV and video surveillance systems for monitoring and security.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔑</div>
-          <h3>Access Control</h3>
-          <p>Entry control, attendance systems, turnstiles, gates, and barriers.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📢</div>
-          <h3>Audio/Video Systems</h3>
-          <p>Intercom, evacuation, and public address systems.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🌐</div>
-          <h3>Network Infrastructure</h3>
-          <p>Structured cabling, local computer networks, and telephone systems.</p>
-        </div>
+  <!-- Services Process Section -->
+  <section class="services-process" id="services-process">
+   <div class="container">
+    <h4 class="section-subtitle" data-i18n="co-nabízíme">
+     CO NABÍZÍME
+    </h4>
+    <h2 class="section-title" data-i18n="náš-servisní-proces">
+     Náš servisní proces
+    </h2>
+    <div class="process-grid">
+     <div class="process-card">
+      <div class="process-icon">
+       1
       </div>
-    </div>
-  </section>
-
-  <!-- Service Offerings Section -->
-  <section class="offerings">
-    <div class="container">
-      <h4 class="section-subtitle">WHAT WE OFFER</h4>
-      <h2 class="section-title">Our Service Process</h2>
-
-      <div class="offerings-list">
-        <div class="offering-item">
-          <div class="offering-number">01</div>
-          <div class="offering-content">
-            <h3>Consultation & Support</h3>
-            <p>Expert guidance and consultation to understand your security needs.</p>
-          </div>
-        </div>
-        <div class="offering-item">
-          <div class="offering-number">02</div>
-          <div class="offering-content">
-            <h3>Security & System Studies</h3>
-            <p>Comprehensive analysis and development of security strategies.</p>
-          </div>
-        </div>
-        <div class="offering-item">
-          <div class="offering-number">03</div>
-          <div class="offering-content">
-            <h3>Project Development</h3>
-            <p>Detailed project planning at all stages including authorized certification.</p>
-          </div>
-        </div>
-        <div class="offering-item">
-          <div class="offering-number">04</div>
-          <div class="offering-content">
-            <h3>Implementation & Oversight</h3>
-            <p>Professional installation, engineering, and coordination services.</p>
-          </div>
-        </div>
-        <div class="offering-item">
-          <div class="offering-number">05</div>
-          <div class="offering-content">
-            <h3>Maintenance & Support</h3>
-            <p>Ongoing service, maintenance, and 24/7 support for all systems.</p>
-          </div>
-        </div>
+      <h3 data-i18n="consultation-&amp;-support">
+       Konzultace a podpora
+      </h3>
+      <p data-i18n="expert-guidance-and-consultation-to-understand-your-security">
+       Odborné poradenství a konzultace pro pochopení vašich bezpečnostních potřeb.
+      </p>
+     </div>
+     <div class="process-card">
+      <div class="process-icon">
+       2
       </div>
+      <h3 data-i18n="security-&amp;-system-studies">
+       Bezpečnostní a systémové studie
+      </h3>
+      <p data-i18n="comprehensive-analysis-and-development-of-security-strategi">
+       Komplexní analýza a vývoj bezpečnostních strategií.
+      </p>
+     </div>
+     <div class="process-card">
+      <div class="process-icon">
+       3
+      </div>
+      <h3 data-i18n="project-development">
+       Vývoj projektů
+      </h3>
+      <p data-i18n="detailed-project-planning-at-all-stages-including-authorize">
+       Detailní projektové plánování ve všech fázích včetně autorizované certifikace.
+      </p>
+     </div>
+     <div class="process-card">
+      <div class="process-icon">
+       4
+      </div>
+      <h3 data-i18n="implementation-&amp;-oversight">
+       Implementace a dohled
+      </h3>
+      <p data-i18n="professional-installation-engineering-and-coordination-ser">
+       Profesionální instalace, inženýrské a koordinační služby.
+      </p>
+     </div>
+     <div class="process-card">
+      <div class="process-icon">
+       5
+      </div>
+      <h3 data-i18n="maintenance-&amp;-support">
+       Údržba a podpora
+      </h3>
+      <p data-i18n="ongoing-service-maintenance-and-24/7-support-for-all-syste">
+       Průběžný servis, údržba a podpora 24/7 pro všechny systémy.
+      </p>
+     </div>
     </div>
+   </div>
   </section>
-
+  <!-- Team Section -->
+  <section class="team" id="team">
+   <div class="container">
+    <h4 class="section-subtitle" data-i18n="náš-tým">
+     NÁŠ TÝM
+    </h4>
+    <h2 class="section-title" data-i18n="odborníci-v-oboru">
+     Odborníci v oboru
+    </h2>
+    <div class="team-grid">
+     <div class="team-member">
+      <div class="member-image">
+       <img alt="Team Member" src="assets/team-member1.jpg"/>
+      </div>
+      <h3>
+       Ing. Tomáš Novák
+      </h3>
+      <p class="position">
+       Jednatel společnosti
+      </p>
+     </div>
+     <div class="team-member">
+      <div class="member-image">
+       <img alt="Team Member" src="assets/team-member2.jpg"/>
+      </div>
+      <h3>
+       Ing. Jan Svoboda
+      </h3>
+      <p class="position">
+       Technický ředitel
+      </p>
+     </div>
+     <div class="team-member">
+      <div class="member-image">
+       <img alt="Team Member" src="assets/team-member3.jpg"/>
+      </div>
+      <h3>
+       Ing. Petr Dvořák
+      </h3>
+      <p class="position">
+       Vedoucí projektů
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
   <!-- Footer -->
-  <footer id="contact" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <div class="logo">SCTechnology</div>
-        <p class="company-info">SCTechnology s.r.o. • Kolbenova 942/38a • 190 00 Praha 9</p>
-        <p class="company-details">IČ: 261 49 311 • DIČ: CZ2614931133</p>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-logo">
+      <img alt="SC Technology Logo" src="assets/logo.png"/>
+      <p>
+       SCTechnology s.r.o. • Kolbenova 942/38a • 190 00 Praha 9
+      </p>
+      <p>
+       IČ: 261 49 311 • DIČ: CZ26149311
+      </p>
+     </div>
+     <div class="footer-links">
+      <h4 data-i18n="quick-links">
+       Rychlé odkazy
+      </h4>
+      <ul>
+       <li>
+        <a data-i18n="home" href="index.html">
+         Domů
+        </a>
+       </li>
+       <li>
+        <a data-i18n="about-us" href="ONas.html">
+         O nás
+        </a>
+       </li>
+       <li>
+        <a data-i18n="contacts" href="kontakty.html">
+         Kontakty
+        </a>
+       </li>
+       <li>
+        <a data-i18n="reference" href="reference.html">
+         Reference
+        </a>
+       </li>
+       <li>
+        <a data-i18n="certification" href="#">
+         Certifikace
+        </a>
+       </li>
+       <li>
+        <a data-i18n="our-partners" href="partneri.html">
+         Our Partners
+        </a>
+       </li>
+       <li>
+        <a data-i18n="write" href="#">
+         Write
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-contact">
+      <h4 data-i18n="contact-info">
+       Kontaktní informace
+      </h4>
+      <p>
+       <strong>
+        Email:
+       </strong>
+       sctechnology@sctechnology.cz
+      </p>
+      <p>
+       <strong>
+        Tel:
+       </strong>
+       +420 266 107 450
+      </p>
+      <p>
+       Kolbenova 942/38a · 190 00 Praha 9
+      </p>
+     </div>
+     <div class="footer-social">
+      <h4 data-i18n="social-links">
+       Sociální sítě
+      </h4>
+      <div class="social-icons">
+       <a href="#">
+        <i class="fab fa-facebook">
+         Facebook
+        </i>
+       </a>
+       <a href="#">
+        <i class="fab fa-linkedin">
+         LinkedIn
+        </i>
+       </a>
       </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ONas.html">About Us</a></li>
-          <li><a href="#">Contacts</a></li>
-          <li><a href="#">Reference</a></li>
-          <li><a href="#">Certification</a></li>
-          <li><a href="#">Our Partners</a></li>
-          <li><a href="#">Write</a></li>
-        </ul>
+      <div class="service-available">
+       <h4 data-i18n="24/7-service-available">
+        Servis k dispozici 24/7
+       </h4>
+       <p>
+        +420 266 107 450
+       </p>
       </div>
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <p><i class="contact-icon">📞</i> +420 774 119 164</p>
-        <p><i class="contact-icon">📧</i> sctechnology@sctechnology.cz</p>
-        <p><i class="contact-icon">📍</i> Kolbenova 942/38a · 190 00 Prague 9</p>
-      </div>
-      <div class="footer-section">
-        <h4>Social Links</h4>
-        <div class="social-icons">
-          <a href="#" class="social-icon">�</a>
-          <a href="#" class="social-icon">�</a>
-          <a href="#" class="social-icon">📷</a>
-        </div>
-        <p class="service-note">24/7 Service Available</p>
-      </div>
+     </div>
     </div>
-    <div class="copyright">
-      © 2023 SCTechnology s.r.o. All rights reserved.
+    <div class="footer-bottom">
+     © 2023 SCTechnology s.r.o. Všechna práva vyhrazena.
     </div>
+   </div>
   </footer>
-  <script>
-    // Dark Mode Toggle
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-
-    // Burger Menu
-    const burger = document.querySelector('.burger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    burger.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-  </script>
-
-</body>
+ </body>
 </html>

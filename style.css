@@ -5,16 +5,44 @@
   font-family: 'Inter', sans-serif;
 }
 
+:root {
+  /* Light Mode Colors (Default) */
+  --primary-color: #2563eb; /* Modern blue */
+  --secondary-color: #0f172a; /* Dark blue/slate */
+  --accent-color: #3b82f6; /* Lighter blue */
+  --text-color: #1e293b; /* Slate for text */
+  --light-text: #64748b; /* Light slate for secondary text */
+  --background-color: #ffffff; /* White background */
+  --light-bg: #f8fafc; /* Very light blue/gray for sections */
+  --border-color: #e2e8f0; /* Light gray for borders */
+  --card-bg: #ffffff; /* Card background */
+  --navbar-bg: rgba(255, 255, 255, 0.98); /* Navbar background */
+  --navbar-text: #1e293b; /* Navbar text */
+  --hero-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); /* Hero overlay */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --transition: all 0.3s ease;
+}
+
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 body {
-  color: #fff;
-  background-color: #0a0a0a;
+  color: var(--text-color);
+  background-color: var(--background-color);
   line-height: 1.8;
-  font-size: 16px;
+  font-size: 1rem;
   overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -26,46 +54,77 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 1rem 0;
-  border-bottom: 2px solid #1e57a6;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background-color: var(--navbar-bg);
+  padding: 0; /* Removed padding to accommodate larger logo */
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem 0; /* Added padding to the content instead of the navbar */
+  height: auto; /* Allows height to adjust to the logo size */
 }
 
 .logo {
   font-weight: 800;
   font-size: 1.2rem;
-  color: #00bfff;
+  color: var(--primary-color);
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
   position: relative;
-  padding-bottom: 4px;
+  padding: 0.5rem 0;
   cursor: pointer;
-  transition: color 0.3s;
-  font-weight: 500;
+  transition: var(--transition);
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .nav-links li a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.nav-links li a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover:after {
+  width: 100%;
+}
+
+.nav-links li:hover a {
+  color: var(--primary-color);
 }
 
 .nav-links li:hover {
@@ -102,21 +161,22 @@ body {
 
 /* Hero */
 .hero {
-  background: #111 url('/assets/BackgroundIndex.png') center/cover no-repeat;
-  padding: 8rem 0;
+  background: var(--secondary-color) url('/assets/BackgroundIndex.png') center/cover no-repeat;
+  padding: 12rem 0 8rem; /* Increased top padding to account for larger navbar */
   text-align: center;
   color: white;
   position: relative;
   overflow: hidden;
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
+  margin-top: 60px; /* Added margin to account for larger navbar */
 }
 
 .hero .overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background: var(--hero-overlay);
   z-index: 0;
 }
 
@@ -146,28 +206,53 @@ body {
 
 .btn-primary {
   display: inline-block;
-  background: #007bff;
+  background: var(--primary-color);
   color: #fff;
-  padding: 0.9rem 1.8rem;
-  border-radius: 50px;
+  padding: 1rem 2.2rem;
+  border-radius: var(--radius-lg);
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
   margin-right: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover:before {
+  width: 100%;
 }
 
 .btn-secondary {
   display: inline-block;
   background: transparent;
   color: #fff;
-  padding: 0.9rem 1.8rem;
-  border-radius: 50px;
+  padding: 1rem 2.2rem;
+  border-radius: var(--radius-lg);
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
-  border: 2px solid #fff;
+  transition: var(--transition);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   margin-left: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -190,19 +275,22 @@ body {
 
 /* About Section */
 .about {
-  background: #f8f9fa;
-  color: #212529;
-  padding: 6rem 0;
+  background: var(--light-bg);
+  color: var(--text-color);
+  padding: 10rem 0 6rem; /* Increased top padding to account for larger navbar */
   position: relative;
   overflow: hidden;
+  border-top: 1px solid var(--border-color);
+  transition: var(--transition);
 }
 
 .about-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 4rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .about .text,
@@ -520,8 +608,15 @@ body {
 }
 
 .logo-img {
-  height: 50px;
+  height: 200px; /* Increased to 4x the original size (50px) */
   object-fit: contain;
+  transition: transform 0.3s ease;
+  margin: 8px 0; /* Added margin for better spacing */
+  max-width: none; /* Ensures the logo maintains its aspect ratio */
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.05); /* Subtle hover effect */
 }
 
 /* Animation */
@@ -619,30 +714,62 @@ body {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #fff;
+  color: var(--navbar-text);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: rotate(15deg);
 }
 
 /* Dark Mode Styling */
 body.dark-mode {
-  background-color: #fff;
-  color: #000;
+  --primary-color: #60a5fa; /* Lighter blue for dark mode */
+  --secondary-color: #1e293b; /* Lighter slate for dark mode */
+  --accent-color: #93c5fd; /* Even lighter blue for dark mode */
+  --text-color: #e2e8f0; /* Light gray for text in dark mode */
+  --light-text: #94a3b8; /* Medium gray for secondary text in dark mode */
+  --background-color: #0f172a; /* Dark blue/slate background */
+  --light-bg: #1e293b; /* Slightly lighter blue/slate for sections */
+  --border-color: #334155; /* Medium slate for borders */
+  --card-bg: #1e293b; /* Card background in dark mode */
+  --navbar-bg: rgba(15, 23, 42, 0.98); /* Dark navbar background */
+  --navbar-text: #e2e8f0; /* Light text for navbar */
+  --hero-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)); /* Darker hero overlay */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 
-body.dark-mode .navbar,
-body.dark-mode .footer {
-  background-color: #f0f0f0;
-  color: #000;
+/* Apply dark mode styles using CSS variables */
+.navbar {
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
-body.dark-mode .nav-links li::after {
-  background: #1E57A6;
+.nav-links li a {
+  color: var(--navbar-text);
 }
 
-body.dark-mode .btn-primary {
-  background: #1E57A6;
-  color: #fff;
+.nav-links li a:after {
+  background-color: var(--primary-color);
 }
 
-body.dark-mode .btn-primary:hover {
-  background: #144689;
+.hero .overlay {
+  background: var(--hero-overlay);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background: var(--accent-color);
+  color: var(--secondary-color);
 }
