@@ -4,7 +4,6 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title data-i18n="sctechnology">
-   SCTechnology
   </title>
   <link href="style.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -242,48 +241,7 @@
       IČ: 261 49 311 • DIČ: CZ26149311
      </p>
     </div>
-    <div class="footer-section">
-     <h4 data-i18n="rychlé-odkazy">
-      Rychlé odkazy
-     </h4>
-     <ul>
-      <li>
-       <a data-i18n="domů" href="index.html">
-        Domů
-       </a>
-      </li>
-      <li>
-       <a data-i18n="o-nás" href="ONas.html">
-        O nás
-       </a>
-      </li>
-      <li>
-       <a data-i18n="kontakty" href="kontakty.html">
-        Kontakty
-       </a>
-      </li>
-      <li>
-       <a data-i18n="reference" href="#">
-        Reference
-       </a>
-      </li>
-      <li>
-       <a data-i18n="certifikace" href="#">
-        Certifikace
-       </a>
-      </li>
-      <li>
-       <a data-i18n="naši-partneři" href="partneri.html">
-        Naši partneři
-       </a>
-      </li>
-      <li>
-       <a data-i18n="napište" href="#">
-        Napište
-       </a>
-      </li>
-     </ul>
-    </div>
+    <!-- Quick links section removed -->
     <div class="footer-section">
      <h4 data-i18n="kontaktní-informace">
       Kontaktní informace
@@ -307,23 +265,11 @@
       Kolbenova 942/38a · 190 00 Praha 9
      </p>
     </div>
+    <!-- Social links section removed -->
     <div class="footer-section">
-     <h4 data-i18n="sociální-sítě">
-      Sociální sítě
-     </h4>
-     <div class="social-icons">
-      <a class="social-icon" href="#">
-       �
-      </a>
-      <a class="social-icon" href="#">
-       �
-      </a>
-      <a class="social-icon" href="#">
-       📷
-      </a>
-     </div>
      <p class="service-note" data-i18n="servis-k-dispozici-24-7">
-      Servis k dispozici 24/7
+      <strong>Servis k dispozici 24/7</strong><br>
+      +420 266 107 450
      </p>
     </div>
    </div>
@@ -331,23 +277,6 @@
     © 2023 SCTechnology s.r.o. Všechna práva vyhrazena.
    </div>
   </footer>
-  <script>
-    // Dark Mode Toggle initialization only
-    // Translation is handled by simple-translations.js
-    // Dark Mode Toggle
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-
-    // Burger Menu
-    const burger = document.querySelector('.burger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    burger.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-  </script>
+  <!-- Script functionality moved to script.js -->
  </body>
 </html>

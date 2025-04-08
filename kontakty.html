@@ -120,24 +120,24 @@
     <nav class="nav-menu">
      <ul class="nav-links">
       <li>
-       <a data-i18n="home" href="index.html">
-        Home
+       <a data-i18n="domů" href="index.html">
+        Domů
        </a>
       </li>
       <li>
-       <a data-i18n="about-us" href="ONas.html">
-        About Us
+       <a data-i18n="o-nás" href="ONas.html">
+        O nás
        </a>
       </li>
       <li>
-       <a data-i18n="contacts" href="kontakty.html">
+       <a data-i18n="kontakty" href="kontakty.html">
         Kontakty
        </a>
       </li>
       <!-- Reference removed -->
       <!-- Certifikace removed -->
       <li>
-       <a data-i18n="our-partners" href="partneri.html">
+       <a data-i18n="naši-partneři" href="partneri.html">
         Naši partneři
        </a>
       </li>
@@ -198,7 +198,7 @@
       </div>
       <div class="contact-detail">
        <strong data-i18n="company-director">
-        Company Director:
+        Ředitel společnosti:
        </strong>
        +420 774 119 164
       </div>
@@ -215,7 +215,7 @@
       <div class="contact-departments">
        <div class="department">
         <div class="department-name" data-i18n="company-director">
-         Company Director:
+         Ředitel společnosti:
         </div>
         <a class="contact-email" data-i18n="simek-sctechnology-cz" href="mailto:simek@sctechnology.cz">
          simek@sctechnology.cz
@@ -310,7 +310,7 @@
       <div class="form-group" style="display: flex; align-items: flex-start; gap: 10px;">
        <input id="newsletter" name="newsletter" style="margin-top: 4px;" type="checkbox"/>
        <label data-i18n="i-agree-that-sctechnology-s-r-o-may-send-me-commercial-commu" for="newsletter" style="font-size: 0.9rem; color: #6c757d;">
-        I agree that SCTechnology s.r.o. may send me commercial communications regarding the offer of products and services in accordance with Act No. 480/2004 Coll. as amended. By giving your consent, in accordance with Act No. 101/2000 Coll. as amended, you give your consent to the processing of the provided email address by SCTechnology s.r.o. for the purpose of inclusion in the database and other advertising, marketing purposes, i.e. especially offering products, services and for the purpose of sending commercial communications through electronic means according to valid Act No. 480/2004 Coll., for a period of 10 years until revocation. You can cancel this consent at any time by sending an email to sctechnology@sctechnology.cz
+        Souhlasím s tím, že společnost SCTechnology s.r.o. mi může zasílat obchodní sdělení týkající se nabídky produktů a služeb v souladu se zákonem č. 480/2004 Sb. v platném znění. Udělením souhlasu v souladu se zákonem č. 101/2000 Sb. v platném znění, dáváte souhlas se zpracováním poskytnuté e-mailové adresy společností SCTechnology s.r.o. za účelem zařazení do databáze a dalších reklamních, marketingových účelů, tj. zejména nabízení produktů, služeb a za účelem zasílání obchodních sdělení prostřednictvím elektronických prostředků podle platného zákona č. 480/2004 Sb., po dobu 10 let do odvolání. Tento souhlas můžete kdykoliv zrušit zasíláním e-mailu na adresu sctechnology@sctechnology.cz
        </label>
       </div>
       <div style="text-align: center; margin-top: 20px;">
@@ -363,51 +363,10 @@
       IČ: 261 49 311 • DIČ: CZ26149311
      </p>
     </div>
-    <div class="footer-section">
-     <h4 data-i18n="quick-links">
-      Rychlé odkazy
-     </h4>
-     <ul>
-      <li>
-       <a data-i18n="home" href="index.html">
-        Domů
-       </a>
-      </li>
-      <li>
-       <a data-i18n="about-us" href="ONas.html">
-        O nás
-       </a>
-      </li>
-      <li>
-       <a data-i18n="contacts" href="kontakty.html">
-        Kontakty
-       </a>
-      </li>
-      <li>
-       <a data-i18n="reference" href="reference.html">
-        Reference
-       </a>
-      </li>
-      <li>
-       <a data-i18n="certification" href="#">
-        Certifikace
-       </a>
-      </li>
-      <li>
-       <a data-i18n="our-partners" href="partneri.html">
-        Naši partneři
-       </a>
-      </li>
-      <li>
-       <a data-i18n="write" href="#">
-        Napište
-       </a>
-      </li>
-     </ul>
-    </div>
+    <!-- Quick links section removed -->
     <div class="footer-section">
      <h4 data-i18n="contact-info">
-      Contact Info
+      Kontaktní informace
      </h4>
      <p>
       <i class="contact-icon">
@@ -428,23 +387,11 @@
       Kolbenova 942/38a · 190 00 Prague 9
      </p>
     </div>
+    <!-- Social links section removed -->
     <div class="footer-section">
-     <h4 data-i18n="social-links">
-      Sociální sítě
-     </h4>
-     <div class="social-icons">
-      <a class="social-icon" href="#">
-       📱
-      </a>
-      <a class="social-icon" href="#">
-       💼
-      </a>
-      <a class="social-icon" href="#">
-       📷
-      </a>
-     </div>
      <p class="service-note" data-i18n="24-7-service-available">
-      Servis k dispozici 24/7
+      <strong>Servis k dispozici 24/7</strong><br>
+      +420 266 107 450
      </p>
     </div>
    </div>
@@ -453,21 +400,6 @@
    </div>
   </footer>
   <script>
-   // Dark Mode Toggle
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-
-    // Burger Menu
-    const burger = document.querySelector('.burger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    burger.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-
     // Contact Form Handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -501,5 +433,6 @@
       });
     }
   </script>
+  <!-- Dark Mode and Burger Menu functionality moved to script.js -->
  </body>
 </html>

@@ -14,9 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Dark mode toggle
   const darkModeToggle = document.querySelector('.dark-mode-toggle');
   
-  // Check for saved theme preference or use preferred color scheme
+  // Check for saved theme preference, time-based setting, or system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  
+  // Function to check if it's nighttime (between 7 PM and 7 AM)
+  function isNightTime() {
+    const currentHour = new Date().getHours();
+    return currentHour >= 19 || currentHour < 7;
+  }
   
   // Function to set the theme
   function setTheme(theme) {
@@ -37,12 +43,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
+  // Function to set theme based on time of day
+  function setThemeByTime() {
+    if (isNightTime()) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+  
   // Set initial theme
-  if (savedTheme) {
+  if (savedTheme && localStorage.getItem('themeMode') === 'manual') {
+    // User has manually set a preference, use that
     setTheme(savedTheme);
+  } else if (localStorage.getItem('themeMode') === 'auto' || !localStorage.getItem('themeMode')) {
+    // Auto mode is enabled or no mode set, set theme based on time
+    localStorage.setItem('themeMode', 'auto'); // Set auto as default
+    setThemeByTime();
   } else if (prefersDarkScheme.matches) {
+    // Use system preference if no saved theme
     setTheme('dark');
   } else {
+    // Default to light mode
     setTheme('light');
   }
   
@@ -51,20 +73,50 @@ document.addEventListener('DOMContentLoaded', function() {
     darkModeToggle.addEventListener('click', function() {
       if (document.body.classList.contains('dark-mode')) {
         setTheme('light');
+        localStorage.setItem('themeMode', 'manual'); // User manually selected a theme
       } else {
         setTheme('dark');
+        localStorage.setItem('themeMode', 'manual'); // User manually selected a theme
       }
+    });
+    
+    // Add long-press functionality to enable auto mode
+    let pressTimer;
+    darkModeToggle.addEventListener('mousedown', function() {
+      pressTimer = window.setTimeout(function() {
+        localStorage.setItem('themeMode', 'auto');
+        setThemeByTime();
+        alert('Auto theme mode enabled! Theme will change based on time of day.');
+      }, 1500); // 1.5 seconds long press
+    });
+    
+    darkModeToggle.addEventListener('mouseup', function() {
+      clearTimeout(pressTimer);
+    });
+    
+    darkModeToggle.addEventListener('mouseleave', function() {
+      clearTimeout(pressTimer);
     });
   }
   
   // Listen for changes in color scheme preference
   prefersDarkScheme.addEventListener('change', function(e) {
-    if (e.matches) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
+    // Only apply system preference changes if not in manual mode
+    if (localStorage.getItem('themeMode') !== 'manual') {
+      if (e.matches) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
     }
   });
+  
+  // Check time every hour to update theme if in auto mode
+  setInterval(function() {
+    if (localStorage.getItem('themeMode') === 'auto') {
+      setThemeByTime();
+    }
+  }, 60 * 60 * 1000); // Check every hour
   
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
