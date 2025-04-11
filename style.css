@@ -8,6 +8,7 @@
 :root {
   /* Light Mode Colors (Default) */
   --primary-color: #2563eb; /* Modern blue */
+  --primary-color-rgb: 37, 99, 235; /* RGB values for primary color */
   --secondary-color: #0f172a; /* Dark blue/slate */
   --accent-color: #3b82f6; /* Lighter blue */
   --text-color: #1e293b; /* Slate for text */
@@ -458,34 +459,68 @@ body {
 
 .service-card {
   background: var(--card-bg, #f8f9fa);
-  border-radius: 10px;
-  padding: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--radius-md);
+  padding: 35px 30px;
+  transition: var(--transition);
   box-shadow: var(--shadow-md);
   text-align: center;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.service-card:hover .service-icon {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .service-icon {
   font-size: 2.5rem;
   color: var(--primary-color, #007bff);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  background-color: rgba(var(--primary-color-rgb, 0, 123, 255), 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: var(--transition);
 }
 
 .service-card h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--heading-color, #212529);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.service-card h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
 }
 
 .service-card p {
   color: var(--paragraph-color, #6c757d);
   line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 0;
 }
 
 /* Offerings Section */
@@ -767,6 +802,7 @@ body {
 /* Dark Mode Styling */
 body.dark-mode {
   --primary-color: #38bdf8; /* Bright sky blue for dark mode - high contrast */
+  --primary-color-rgb: 56, 189, 248; /* RGB values for primary color in dark mode */
   --secondary-color: #1e293b; /* Lighter slate for dark mode */
   --accent-color: #93c5fd; /* Even lighter blue for dark mode */
   --text-color: #f1f5f9; /* Brighter white for better readability */
