@@ -117,26 +117,26 @@ document.addEventListener('DOMContentLoaded', function() {
       setThemeByTime();
     }
   }, 60 * 60 * 1000); // Check every hour
-  
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
-      
+
       if (href !== '#') {
         e.preventDefault();
-        
+
         const targetElement = document.querySelector(href);
         if (targetElement) {
           const headerOffset = 100; // Adjust based on your header height
           const elementPosition = targetElement.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          
+
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
           });
-          
+
           // Close mobile menu if open
           if (navMenu && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
@@ -146,4 +146,31 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Contact form handling
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if (!firstName || !lastName || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      alert('Thank you for your message! We will contact you soon.');
+      contactForm.reset();
+    });
+  }
 });
