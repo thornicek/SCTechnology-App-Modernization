@@ -195,7 +195,7 @@ body {
 
 /* Hero */
 .hero {
-  background: var(--secondary-color) url('assets/hero-bg.jpg') center/cover no-repeat;
+  background: var(--secondary-color) url('assets/images/hero-bg.jpg') center/cover no-repeat;
   padding: 12rem 0 8rem; /* Increased top padding to account for larger navbar */
   text-align: center;
   color: white;
@@ -1085,6 +1085,379 @@ body.dark-mode {
   .partner-logo {
     max-height: 80px;
   }
+}
+
+/* ── Certifications Page ──────────────────────────────────────────────────── */
+.cert-section {
+  background: var(--light-bg);
+  padding: 6rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cert-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.cert-card-accent {
+  height: 5px;
+  background: var(--primary-color);
+}
+
+.cert-card-accent.schrack {
+  background: linear-gradient(90deg, #c8200a, #e8400f);
+}
+
+.cert-card-accent.honeywell {
+  background: linear-gradient(90deg, #cc0000, #e60000);
+}
+
+.cert-card-body {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-issuer {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--light-text);
+  margin-bottom: 0.25rem;
+}
+
+.cert-product-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--heading-color);
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.cert-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-color);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.cert-holder {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.cert-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 800;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cert-holder-info { flex: 1; }
+
+.cert-holder-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--heading-color);
+  line-height: 1.2;
+}
+
+.cert-valid-until {
+  font-size: 0.78rem;
+  color: var(--light-text);
+}
+
+.cert-valid-badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #16a34a;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cert-download-row {
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--light-bg);
+}
+
+.cert-download-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+}
+
+.cert-download-link:hover { gap: 14px; }
+
+.cert-download-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* ── eCLIQ Featured Solution Section ─────────────────────────────────────── */
+.ecliq-section {
+  background: #ffffff;
+  padding: 6rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.ecliq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.ecliq-text .section-subtitle { text-align: left; }
+
+.ecliq-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--heading-color);
+  margin: 0.5rem 0 1rem;
+  line-height: 1.25;
+}
+
+.ecliq-text > p {
+  font-size: 1rem;
+  color: var(--paragraph-color);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.ecliq-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.ecliq-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--paragraph-color);
+  line-height: 1.5;
+}
+
+.ecliq-benefits li svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.ecliq-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.btn-outline-dark {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.btn-outline-dark:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.ecliq-visual {
+  background: linear-gradient(135deg, #0a1628 0%, #0f2a5c 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecliq-visual::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ecliq-visual-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ecliq-use-cases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ecliq-use-case {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.ecliq-use-case:hover { background: rgba(255, 255, 255, 0.13); }
+
+.ecliq-use-case svg {
+  width: 28px;
+  height: 28px;
+  stroke: #60a5fa;
+  display: block;
+  margin: 0 auto 0.6rem;
+}
+
+.ecliq-use-case-label {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.ecliq-download-note {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .ecliq-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+/* ── Team Section ────────────────────────────────────────────────────────── */
+.team {
+  background: var(--light-bg);
+  padding: 6rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.team-member {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.member-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.team-member h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.4rem;
+}
+
+.team-member .position {
+  font-size: 0.88rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Contact Page */
