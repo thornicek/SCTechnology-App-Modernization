@@ -307,11 +307,146 @@ body {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* About Section */
+/* ── Stats bar ────────────────────────────────────────────────────────────── */
+.stats-bar {
+  background: linear-gradient(180deg, #0b1a38 0%, #0f2044 100%);
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stats-bar .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0.5rem 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.10);
+  flex: 1;
+  min-width: 140px;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.60);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.10); }
+  .stat-item:last-child { border-bottom: none; }
+}
+
+/* ── Callout / CTA band ───────────────────────────────────────────────────── */
+.callout-band {
+  background: linear-gradient(135deg, #0a1628 0%, #0f2a5c 50%, #0a1628 100%);
+  padding: 5.5rem 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.callout-band::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -8%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.callout-band::after {
+  content: '';
+  position: absolute;
+  bottom: -55%;
+  left: -6%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.callout-content {
+  position: relative;
+  z-index: 1;
+}
+
+.callout-content h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.callout-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 620px;
+  margin: 0 auto 2.2rem;
+  line-height: 1.8;
+}
+
+.callout-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-outline-light {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 1rem 2.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-outline-light:hover {
+  border-color: white;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Slim hero for sub-pages ──────────────────────────────────────────────── */
+.hero--slim {
+  min-height: 42vh;
+  padding: 8rem 0 4rem;
+}
+
+/* ── About Section ────────────────────────────────────────────────────────── */
 .about {
-  background: var(--light-bg);
+  background: #ffffff;
   color: var(--text-color);
-  padding: 10rem 0 6rem; /* Increased top padding to account for larger navbar */
+  padding: 6rem 0;
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--border-color);
@@ -593,9 +728,24 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #111;
+  background-color: #0d1117;
   color: #ccc;
   padding: 4rem 0 1rem;
+  border-top: 3px solid var(--primary-color);
+}
+
+/* GDPR / legal fine-print in forms */
+.gdpr-text {
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.6;
+  max-height: 60px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  cursor: default;
 }
 
 .footer-content {
